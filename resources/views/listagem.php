@@ -1,8 +1,8 @@
-<<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
-    <link rel="stylesheet" type="text/css" href="/css/app.css">
-    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="/css/app.css"> 
+    
     <title>Controle de Estoque</title>
 </head>
 <body>
@@ -12,10 +12,14 @@
     <?php foreach($produtos as $p): ?>
         
     <tr>
-        <td><?= $p->nome ?></td>
-        <td><?= $p->valor?></td>
-        <td><?= $p->descricao?></td>
-        <td><?= $p->quantidade?></td>
+        <td>Nome: <?= $p->nome ?></td>
+        <td>Valor: <?= $p->valor?></td>
+        <td>Descrição: <?= $p->descricao?></td>
+        <td>Quantidade: <?= $p->quantidade?></td>
+        <td>
+        <a href="/produtos/mostra?id=<?= $p->id?>"> Visualizar
+        </a>
+        </td>
      </tr>
     <?php endforeach ?>
     </table>
