@@ -6,13 +6,8 @@
     <title>Controle de Estoque</title>
 </head>
 <body>
-    <h1>Detalhes do Produto <?= $p->nome ?></h1>
 
-    <ul> 
-    <li>
-    Descrição:<?= $p->descricao ?>
-    </li>
-    </ul>
+@yield('conteudo')
 
 </body>
-</html>
+</head>
