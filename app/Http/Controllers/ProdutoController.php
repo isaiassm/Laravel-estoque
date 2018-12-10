@@ -2,12 +2,13 @@
 
 use Illuminate\Support\Facades\DB;
 use Request;
+use App\Produto;
 
 class ProdutoController extends Controller {
    
     public function lista(){
 
-      $produtos = DB::select('select * from produtos');
+      $produtos = Produto::all();
       
       return view('listagem')->with('produtos',$produtos);
       
@@ -16,9 +17,9 @@ class ProdutoController extends Controller {
 
     public function mostra(){
         $id = Request::route('id');
-        $produto = DB::select('select * from produtos where id = ?', [$id]);
+        $produto = Produto::find($id);
 
-        return view('detalhes')->with('p', $produto[0]);
+        return view('detalhes')->with('p', $produto);
     }
     
     public function novo(){
