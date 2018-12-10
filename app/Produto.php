@@ -6,5 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Produto extends Model
 {
+    protected $table = 'produtos';
+    //por padrao o laravel reconhece que nossa tabela se chama produtos 
+    // declarando a class Produto ele reconhe que é minusculo e no plural
+    public $timestamps = false;
     //
 }
