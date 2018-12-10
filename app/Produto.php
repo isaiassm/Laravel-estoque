@@ -10,5 +10,7 @@ class Produto extends Model
     //por padrao o laravel reconhece que nossa tabela se chama produtos 
     // declarando a class Produto ele reconhe que é minusculo e no plural
     public $timestamps = false;
-    //
+
+    protected $fillable = array('nome', 'descricao', 'quantidade', 'valor');
+    
 }
