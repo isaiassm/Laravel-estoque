@@ -15,8 +15,8 @@ class ProdutoController extends Controller {
       //with indica para a view que esta usando a variavel produtos
     }
 
-    public function mostra(){
-        $id = Request::route('id');
+    public function mostra( $id){
+     
         $produto = Produto::find($id);
 
         return view('detalhes')->with('p', $produto);
@@ -36,6 +36,13 @@ class ProdutoController extends Controller {
         return redirect('/produtos')->withInput();
         
     }
+
+    public function remove($id){
+        $produto =  Produto::find($id);
+        $produto->delete();
+        return redirect()->action('ProdutoController@lista');
+    }
+
 }
 
 
