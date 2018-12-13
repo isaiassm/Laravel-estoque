@@ -8,10 +8,11 @@ use App\Http\Requests\ProdutoRequest;
 use Auth;
 class ProdutoController extends Controller {
 
-    public function __construct()
+   public function __construct()
     {
         $this->middleware('autorizador');
     }
+
    
     public function lista(){
       $produtos = Produto::all();
