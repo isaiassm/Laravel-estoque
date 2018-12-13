@@ -5,9 +5,14 @@ use Request;
 use App\Produto;
 use Validator;
 use App\Http\Requests\ProdutoRequest;
+use Auth;
 class ProdutoController extends Controller {
    
     public function lista(){
+
+        if(Auth::guest()){
+            return redirect('/login');
+        }
 
       $produtos = Produto::all();
       

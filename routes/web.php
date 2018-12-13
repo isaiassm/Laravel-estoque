@@ -10,4 +10,5 @@ Route::get('/produtos/remove/{id}', 'ProdutoController@remove');
 Route::get('/produtos/novo', 'ProdutoController@novo');
 Route::post('/produtos/adiciona', 'ProdutoController@adiciona');
 
-Route::get('/login', 'LoginoController@form');
+Route::get('/login', 'LoginController@form');
+Route::post('/login', 'LoginController@login');
