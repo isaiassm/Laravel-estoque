@@ -12,3 +12,5 @@ Route::post('/produtos/adiciona', 'ProdutoController@adiciona');
 
 Route::get('/login', 'LoginController@form');
 Route::post('/login', 'LoginController@login');
+
+Route::get('/home', 'RegisterController@validator');

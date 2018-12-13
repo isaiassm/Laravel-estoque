@@ -7,13 +7,13 @@ use Validator;
 use App\Http\Requests\ProdutoRequest;
 use Auth;
 class ProdutoController extends Controller {
+
+    public function __construct()
+    {
+        $this->middleware('autorizador');
+    }
    
     public function lista(){
-
-        if(Auth::guest()){
-            return redirect('/login');
-        }
-
       $produtos = Produto::all();
       
       return view('listagem')->with('produtos',$produtos);
