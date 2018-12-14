@@ -31,7 +31,7 @@ class ProdutoController extends Controller {
     }
     
     public function novo(){
-        return view('formulario')->with('categorias', Categoria::all());
+        return view('formulario')->with('cateforias', Categoria::all());
     }
 
     public function adiciona(ProdutoRequest $request){

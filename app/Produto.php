@@ -11,6 +11,11 @@ class Produto extends Model
     // declarando a class Produto ele reconhe que é minusculo e no plural
     public $timestamps = false;
 
-    protected $fillable = array('nome', 'descricao', 'quantidade','tamanho', 'valor');
+    protected $fillable = array('nome', 'descricao', 'quantidade','tamanho', 'valor','categoria_id');
     
+
+    public function categoria(){
+       return $this->belongsTo('App\Categoria');
+    }
 }
+
