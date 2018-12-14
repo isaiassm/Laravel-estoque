@@ -13,7 +13,7 @@
 
     <div  class="form-group">
         <label>Senha: </label>
-        <input type="password" name="senha" class="form-control">
+        <input type="password" name="password" class="form-control">
     </div>
 
    

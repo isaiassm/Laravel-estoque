@@ -9,8 +9,8 @@ class Autorizador
   
     public function handle($request, Closure $next)
     {
-        if(!$request->is('login') && \Auth::guest()){
-            return redirect ('/login');
+        if(!$request->is('logar') && \Auth::guest()){
+            return redirect ('/logar');
         }
         return $next($request);
     }

@@ -11,7 +11,7 @@ class LoginController extends Controller
        return view('form_login');
    }
 
-   public function login(){
+   public function logar(){
     $credenciais = Request::only('email','password');
 
     if(Auth::attempt($credenciais)){
