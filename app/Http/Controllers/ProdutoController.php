@@ -6,6 +6,7 @@ use App\Produto;
 use Validator;
 use App\Http\Requests\ProdutoRequest;
 use Auth;
+use App\Categoria;
 class ProdutoController extends Controller {
 
    public function __construct()
@@ -30,7 +31,7 @@ class ProdutoController extends Controller {
     }
     
     public function novo(){
-        return view('formulario');
+        return view('formulario')->with('categorias', Categoria::all());
     }
 
     public function adiciona(ProdutoRequest $request){

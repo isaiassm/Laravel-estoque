@@ -31,11 +31,22 @@
         <label>Tamanho: </label>
         <input name="tamanho" class="form-control">
     </div>
+    <div class="form-group">
+        <label>Categoria: </label>
+        <select name="categoria_id" class="form-control">
+        @foreach($categorias as $c)
+        <option value="{{$c->id}}"> {{$c->nome}}</option>
+        @endforeach
+        </select>
+    </div>
+
 
     <div class="form-group">
         <label>Descrição: </label>
         <input name="descricao" class="form-control">
     </div>
+
+
 <button type="submit" class="btn btn-default">Adiciona</button>
     </form>
 
